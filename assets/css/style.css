@@ -6,7 +6,6 @@ body {
   padding: 0;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
-  text-align: center;
   background: #ffffffcc;
 }
 
@@ -27,6 +26,10 @@ nav > .logo {
   font-weight: bold;
   font-size: 30px;
   line-height: 70px;
+}
+
+.logo:hover {
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(195, 8, 176);
 }
 
 nav li {
@@ -60,6 +63,7 @@ nav img {
   border: 3px black;
   text-align: right;
   color: white;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
   height: auto;
   position: relative;
 }
@@ -155,42 +159,85 @@ nav img {
 /* CONTACTO */
 .contacto {
   background: #aa00b3;
-  padding: 70px;
-  padding-left: 110px;
+  padding: 70px 10%;
   color: #FFFFFF;
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
-.charla {
-  text-align: left;
-  width: 60%;
-  margin: 0px;
-}
-
-.sub-titulo {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-
-.expositor {
-  font-size: 23px;
-  font-weight: 400;
-  margin: 10px 0 10px 0;
-  margin-bottom: 0;
-}
-
-.contacto h5 {
-  font-weight: 400;
+.contacto h2 {
   margin: 0;
 }
 
-.contacto .contenido {
-  margin-bottom: 0;
+.contacto h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 35px;
 }
+
+form {
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  width: 60%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 185px;
+  text-align: left;
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 60%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+.button {
+  padding-left: 90px;
+}
+
+button {
+  padding: 20px 20px;
+  display: inline-block;
+  color: #008000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 3em;
+  overflow: hidden;
+  }
+  
+button:hover {
+  color: #111;
+  background: #39ff14;
+  box-shadow: 0 0 50px #39ff14;
+}
+
 
 /* MIS PROYECTOS */
 .proyectos {
