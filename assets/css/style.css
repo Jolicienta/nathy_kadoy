@@ -1,23 +1,29 @@
-html {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  padding: 0;
-  margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
-  background: #ffffffcc;
+  background: #f4efefcc;
 }
 
 /*NABVAR*/
 nav {
-  background-color: #2d0038; 
-  position: relative;
-  z-index: 10;
-  justify-content: space-between;
+  background-color: #2d0038;
+  position: sticky;
   align-items: center;
   display: flex;
+  justify-content: space-between;
   padding: 0 10%;
+  width: 100vw;
+  z-index: 100;
+  top: 0;
 }
 
 nav > .logo {
@@ -26,14 +32,19 @@ nav > .logo {
   font-weight: bold;
   font-size: 30px;
   line-height: 70px;
+  display: block ruby;
 }
 
 .logo:hover {
   text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(195, 8, 176);
 }
 
-nav li {
-  margin-right: 30px;
+nav > ul {
+  display: inline-block;
+}
+
+nav > ul > li {
+  margin-left: 30px;
   display: inline;
 }
 
@@ -46,10 +57,6 @@ nav li a:hover {
   color: rgb(223, 188, 255);
 }
 
-nav li:first-child {
-  margin-left: 30px;
-}
-
 nav img {
   filter: invert();
   width: 30px;
@@ -59,20 +66,20 @@ nav img {
 
 /*BANNER*/
 .banner {
-  position: relative;
   border: 3px black;
   text-align: right;
   color: white;
   text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
   height: auto;
   position: relative;
+  justify-content: end;
+  display: flex;
 }
 
 .encabezado {
   z-index: 10;
   position: absolute;
-  padding-top: 0px;
-  padding-left: 33%;
+  padding-top: 67px;
   padding-right: 10%;
   display: block;
 }
@@ -182,7 +189,7 @@ form {
   width: 60%;
 }
 
-ul {
+form > ul {
   list-style: none;
   padding: 0;
   margin: 0;
