@@ -13,6 +13,23 @@ body {
   background: #f4efefcc;
 }
 
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.opacity {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*NABVAR*/
 nav {
   background-color: #2d0038;
@@ -79,7 +96,7 @@ nav img {
 .encabezado {
   z-index: 10;
   position: absolute;
-  padding-top: 67px;
+  padding-top: 117px;
   padding-right: 10%;
   display: block;
 }
@@ -110,7 +127,7 @@ nav img {
 /*SECCIÓN ABOUT_ME*/
 .about_me {
   height: 600px;
-  padding: 0 10%;
+  padding: 20% 10%;
   text-align: left;
   color: #000000;
   display: flex;
@@ -166,7 +183,7 @@ nav img {
 /* CONTACTO */
 .contacto {
   background: #aa00b3;
-  padding: 70px 10%;
+  padding: 6% 10%;
   color: #FFFFFF;
   text-align: center;
 }
@@ -274,69 +291,80 @@ button {
   color: #FFFFFF;
 }
 
+.contacto .github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto i {
+  color: white;
+  font-size: 50px;
+  margin-left: 30px;
+  position: relative;
+}
+
+.contacto i:hover {
+  color: #fdc7ff;
+}
+
 
 /* MIS PROYECTOS */
 .proyectos {
-  padding: 100px;
-  padding-left: 130px;
+  height: 850px;
+  padding: 6% 10%;
+  margin-top: 0;
   color: #000F08;
-  margin-bottom: 300px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#evento {
-  width: 26%;
-  height: 250px;
+.proyectos > .titulo {
+  position: absolute;
+}
+
+.proyecto {
+  width: 48%;
+  height: auto;
   float: left;
 }
 
-.evento1, .evento2 {
-  margin-right: 90px;
-}
-
-.contenedor-img {
+.contenedor_img {
   width: 100%;
-  height: 160px;
-  overflow: hidden;
-  margin-top: 70px;
+  height: 560px;
+  margin-top: 93px;
   margin-bottom: 30px;
-  border-radius: 5px;
+  background-color: #000;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .img {
+  width: 100%;
+  height: inherit;
   position: relative;
   background-size: cover;
-  height: 160px;
+  opacity: 0.5;
+}
+
+.proyecto:hover .img {
+  opacity: 1;
+}
+
+.proyecto:hover .contenedor_img {
+  box-shadow: 0 10px 20px rgba(118, 0, 106, 0.606);
 }
 
 #img1 {
-  background-image: linear-gradient(
-      rgba(179, 107, 1, 0.13),
-      rgba(179, 107, 1, 0.13)
-    ), url(../img/post-1.jpg);
-  background-position: center;
-  width: 400px;
-  margin-left: -75px;
+  background-image: url(../img/viajes_de_chile.png);
 }
 
 #img2 {
-  background-image: linear-gradient(
-      rgba(179, 107, 1, 0.13),
-      rgba(179, 107, 1, 0.13)
-    ), url(../img/machine-learning.jpg);
+  background-image: url(../img/portafolio_rails.png);
 }
 
-#img3 {
-  background-image: linear-gradient(
-      rgba(179, 107, 1, 0.13),
-      rgba(179, 107, 1, 0.13)
-    ), url(../img/scrum-sin-scream.jpg);
-  color: rgb();
-  position: relative;
-  background-size: cover;
-  height: 170px;
-}
-
-#evento a {
+.link_proyecto {
   font-size: 22px;
   font-weight: 700;
   text-decoration: none;
@@ -345,26 +373,19 @@ button {
   margin-top: 20px;
 }
 
+.link_proyecto:hover {
+  color: #aa00b3;
+}
+
 /* FOOTER */
 footer {
-  height: 150px;
+  height: 120px;
   background-color: black;
   color: white;
-  padding-top: 50px;
-}
-
-footer li {
-  text-decoration: none;
-  display: inline;
-}
-
-footer i {
-  color: white;
-  font-size: 50px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  display: inline;
-  position: relative;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 

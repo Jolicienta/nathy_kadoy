@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portafolio Jolicienta</title>
     <meta charset="utf-8">
     <meta name="author" content="Natalia Campos Godoy">
@@ -24,16 +24,16 @@
     </nav>
 
     <!-- BANNER -->
-    <section class="banner">
+    <div class="banner">
       <div class="encabezado">
         <p class="titulo-banner">Nathy Kadoy</p>
         <p class="bajada-banner">Programadora Fullstack en Ruby on Rails, Diseñadora UX/UI</p>
       </div>
       <div id="img_banner"></div>
-    </section>
+    </div>
 
     <!-- ABOUT ME  -->
-    <section class="about_me" id="about_me">
+    <div class="about_me" id="about_me">
       <div class="pic" ><img src="assets/img/yo.jpg" alt="una pic de IA mia"></div>
       <div class="contenido">
         <h2 class="titulo">¿Qué hay sobre mí?</h2>
@@ -52,7 +52,7 @@
           Talento Digital para Chile, además de Diseñadora UX/UI.
         </p>
       </div>
-    </section>
+    </div>
 
     <!-- CONTACTO -->
     <section class="contacto" id="contacto">
@@ -88,42 +88,46 @@
               </li>
             </ul>            
           </li>
+          <li class="github">Visita mi Github<a href="https://github.com/Jolicienta"><i class="fab fa-github-square"></i></a></li>
         </ul>
       </form>
     </section>
 
     <!-- PROYECTOS -->
     <section class="proyectos" id="proyectos">
-      <p class="titulo">Eventos anteriores</p>
+      <p class="titulo">Mis Proyectos</p>
 
-      <div id="evento" class="evento1">
-        <div class="contenedor-img"><div class="img" id="img1"></div></div>
-        <a href="evento01.html">Simposio VeganDB</a>
+      <div id="proyecto_1" class="proyecto">
+        <div class="contenedor_img"><div class="img" id="img1"></div></div>
+        <a class="link_proyecto" href="evento01.html">Viajes de Chile</a>
       </div>
 
-      <div id="evento" class="evento2">
-        <div class="contenedor-img"><div class="img" id="img2"></div></div>
-        <a href="#">Machine learning 101</a>
+      <div id="proyecto_2" class="proyecto">
+        <div class="contenedor_img"><div class="img" id="img2"></div></div>
+        <a class="link_proyecto" href="#">Portafolio en rails</a>
       </div>
-
-      <div id="evento" class="evento3">
-        <div class="contenedor-img"><div class="img" id="img3"></div></div>
-        <a href="#">Scrum sin scream</a>
-      </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <ul>
-        <li><a href="https://github.com/"><i class="fab fa-github-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-      </ul>
-      <p>Meet & Coffe 2018. Todos los derechos reservados.</p>
-
+      <p>Mi portafolio web de programadora 2023. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+
+      window.addEventListener('scroll', function() {
+        var sections = document.querySelectorAll('section');
+
+        sections.forEach(function(section) {
+          var position = section.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+
+          if (position - windowHeight <= 0) {
+            section.classList.add('visible');
+          }
+        });
+      });
+
+    </script>
   </body>
 </html>
