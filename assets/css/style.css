@@ -177,7 +177,7 @@ nav img {
 form {
   margin: 0 auto;
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 2px solid #ffffff;
   border-radius: 1em;
   width: 60%;
 }
@@ -204,7 +204,7 @@ textarea {
   font: 1em sans-serif;
   width: 60%;
   box-sizing: border-box;
-  border: 1px solid #999;
+  border: 2px solid #ffffff;
 }
 
 input:focus,
@@ -217,25 +217,54 @@ textarea {
   height: 5em;
 }
 
-.button {
+.btn_send {
   padding-left: 90px;
 }
 
 button {
-  padding: 20px 20px;
-  display: inline-block;
-  color: #008000;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 3em;
-  overflow: hidden;
-  }
+  display: inline;
+  line-height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.send {
+  width: 100px;
+  background-color: white;
+}
   
-button:hover {
-  color: #111;
-  background: #39ff14;
-  box-shadow: 0 0 50px #39ff14;
+.send:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.CV {
+  display: inline;
+}
+
+.CV > li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.btn_spanish, .btn_english {
+  width: 150px;
+}
+
+.btn_spanish {
+  background-color: #4e47ff;
+  color: #FFFFFF;
+}
+
+.btn_english {
+  background-color: #61ff96;
+}
+
+.btn_spanish:hover, .btn_english:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #FFFFFF;
 }
 
 
